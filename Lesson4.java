@@ -110,6 +110,8 @@ public class Lesson4 {
             else if (exp >= 25){
                 reward = 1.5;
             }
+            salary_scan.close();
+            exp_scan.close();
             System.out.print("Therefore your experience "+ exp + ", your bonus is: " + (reward - 1)*salary+", and your salary is: "+salary*reward);
         }
 
