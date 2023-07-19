@@ -28,7 +28,7 @@ public class Lesson6 {
         Напишите программу создающую:
 Øмассив размера 5 элементов + заполнить его рандомальными целыми числами от 0 до 100.
 Øмассив размера 5 элементов + заполнить его произвольными именами.
-ØВывести на экран: Имя и оценку ученика с наибольшей оценкой */
+ØВывести на экран: Имя и оценку ученика с наибольшей оценкой 
 
         int[] array = new int[5];
         String [] names_array =  { "Alex","David","Natali","Anna", "Liza" }; ;
@@ -36,42 +36,69 @@ public class Lesson6 {
             array[i] = (int) (Math.random()*101);
             System.out.println(names_array[i] + " " + array[i] + ", ");
         }
-        int m = 0;
-        for(int i = 0; i< names_array.length - 1; i++){
-            if (array[i] > array [i+1]) {
-                m = i;
+        
+        int max = 0;
+        for(int i = 0; i< array.length ; i++){
+            if(array [max] < array[i]){
+                max = i;
+                System.out.println(array[i] + " " + max + " ");
             }
         }
-        System.out.print(names_array[m] + " " + array[m] + ", ");
-  
+        System.out.print(names_array[max] + " " + array[max] + ", ");
 
-    /*int[] array1 = new int[4];
+Тоже самое но с форич
+    int[] array = new int[5];
+    String [] names_array =  { "Alex","David","Natali","Anna", "Liza" }; ;
+    for(int i:array){
+        array[i] = (int) (Math.random()*101);
+        System.out.println(names_array[i] + " " + array[i] + ", ");
+    }
+        
+    int max = 0;
+    for(int i:array){
+        if(array [max] < array[i]){
+            max = i;
+            System.out.println(array[i] + " " + max + " ");
+        }
+    }
+    System.out.print(names_array[max] + " " + array[max] + ", ");*/
+
+//     Напишите следующую программу:
+// ØСоздайте 2 массива из 4 случайных целых чисел из отрезка [0;8] каждый
+// ØВыведите массивы на экран в двух отдельных строках
+// ØПосчитайте среднее арифметическое элементов каждого массива и сообщите, 
+// для какого из массивов это значение оказалось больше (либо сообщите,
+// что их средние арифметические равны)
+    
+    
+    int[] array1 = new int[4];
     int[] array2 = new int[4];
     int average_sum1 =0;
     int average_sum2 =0;
     System.out.println("array 1: ");
         for(int i = 0; i< array1.length; i++){
-            
-            array1[i] = (int) (Math.random()*8);
+            array1[i] = (int) (Math.random()*9);
             average_sum1 =  average_sum1 + array1[i];
-            System.out.print( array1[i] + " ");
-            
-            
+            System.out.print( array1[i] + " ");                   
         }
         System.out.println(" ");
         System.out.println("array 2: ");
         for(int i = 0; i< array2.length; i++){
-            array2[i] = (int) (Math.random()*8);
+            array2[i] = (int) (Math.random()*9);
             average_sum2 =  average_sum2 + array2[i];
             System.out.print(array2[i] + " ");
         }
         System.out.println(" ");
+        System.out.println("average of array 1: " + average_sum1);
+        System.out.println("average of array 2: " + average_sum2);
         if (average_sum1/4 > average_sum2/4){
             System.out.println("average of array (1): " +average_sum1/4 + " is more than " + "average of array (2): " + average_sum2/4);
         }
         else if (average_sum2/4 > average_sum1/4){
             System.out.println("average of array (2): " + average_sum2/4 + " is more than " + "average of array (1): " + average_sum1/4);
-        }*/
-        
+        }        
+        else if (average_sum2/4 == average_sum1/4){
+            System.out.println("average of array (2): " + average_sum2/4 + " is the same as an average of array (1): " + average_sum1/4);
+        }
     }
 }
