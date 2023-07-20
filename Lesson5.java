@@ -25,11 +25,27 @@ public class Lesson5 {
             i++;
             x=z;
             System.out.println(z + " ");
-        } */
+        }
         int i = 1;
         while(i <=6){
         int e = (int) ( Math.random() * 34)+1;
         i ++;
         System.out.print("int from 0 to 10: " + e);}
+
+        ØВыведите на экран первые 11 членов последовательности Фибоначчи. Напоминаем, что:
+Øпервый и второй члены последовательности равны единицам
+Øа каждый следующий - сумме двух предыдущих
+решение:  1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 */
+        
+        int first =1;
+        int second =1;
+        System.out.print(first + " " + second + " ");
+        int next =0;
+        for(int i = 3; i<=11; i++){
+            next = first+second;
+            System.out.print(next + " ");
+            first = second;
+            second = next;
+        }
     }
 }
