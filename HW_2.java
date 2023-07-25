@@ -16,9 +16,7 @@ public class HW_2 {
         while(n<3 || n != (int)(n)){
             if(n<3 || n != (int)(n) ){
                 System.out.print("Your number is NOT natural number more than 3. Enter the length of an array, which is a natural number more than 3: ");
-                Scanner new_l_scan=new Scanner(System.in);
-                n = new_l_scan.nextInt();
-                new_l_scan.close();
+                n = l_scan.nextInt();
             }
         }             
         int even=0; 

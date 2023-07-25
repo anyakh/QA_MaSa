@@ -2,20 +2,18 @@
 #пользователем является палиндромом. Например:
 #Ася, молоко около мяса. палиндром
 
-# palindrom1 = input('введите палиндром: ')
-# palindrom1 = palindrom1.replace(' ', '')
-# palindrom1 = palindrom1.replace(',', '')
-# palindrom1 = palindrom1.replace('.', '')
-# palindrom1 = palindrom1.replace('!', '')
-# palindrom1 = palindrom1.replace('?', '')
-# palindrom1 = palindrom1.lower()
-# print(palindrom1)
-# mardnilap = palindrom1[-1::-1]
-# print(mardnilap)
-# if palindrom1 == mardnilap:
-#     print("Поздравляю вы ввели палиндром!")
-# else:
-#     print("Вы ввели не палиндром :( ")
+palindrom1 = input('введите палиндром: ')
+palindrom1 = palindrom1.replace(' ', '')
+palindrom1 = palindrom1.replace(',', '')
+palindrom1 = palindrom1.replace('.', '')
+palindrom1 = palindrom1.replace('!', '')
+palindrom1 = palindrom1.replace('?', '')
+palindrom1 = palindrom1.lower()
+print(palindrom1)
+if palindrom1 == palindrom1[-1::-1]:
+    print("Поздравляю вы ввели палиндром!")
+else:
+    print("Вы ввели не палиндром :( ")
 
 #Удалите в строке ' a b c d e f ' все пробелы и выведите результат на экран
 
@@ -57,18 +55,18 @@ print(f'length counted with the help of while: {count}')'''
 дополнительно сообщая пользователю верный результат. Для получения
 случайных целых чисел из диапазона 2 99 импортируйте из модуля
 random стандартной библиотеки метод randrange.'''
-import random
-i = -1
-while i == -1:
-    single_digit_num = (int)(random.randrange(2,99))
-    single_digit_num = (int)(single_digit_num/10)
-    double_digit_num = (int)(random.randrange(2,99))
-    print(f'Перемножте однозначное натуральное число {single_digit_num} на двузначное {double_digit_num}')
-    result = (int)(input('Результат: '))
-    right_result = single_digit_num*double_digit_num
-    if result == right_result:
-       print("Ваш ответ верный!")
-       i = 0
-    else:
-        print(f"Ваш ответ неверный, правильный ответ: {right_result}")
-        i = -1
+# import random
+
+# while True:
+#     single_digit_num = (int)(random.randrange(2,99))
+#     single_digit_num = (int)(single_digit_num/10)
+#     double_digit_num = (int)(random.randrange(2,99))
+#     print(f'Перемножте однозначное натуральное число {single_digit_num} на двузначное {double_digit_num}')
+#     result = (int)(input('Результат: '))
+#     right_result = single_digit_num*double_digit_num
+#     if result == right_result:
+#        print("Ваш ответ верный!")
+#        break
+#     else:
+#         print(f"Ваш ответ неверный, правильный ответ: {right_result}")
+#         i = -1
