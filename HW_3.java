@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class HW_3 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         
 //     Напишите программу, которая принимает два числа - длину и ширину прямоугольника от пользователя. 
 // Затем программа должна вызывать метод, который принимает эти два числа и возвращает 
@@ -16,44 +16,44 @@ public class HW_3 {
 
     // task2();
     }
-    static void task2(){
+    static void task2() {
         String c = "Enter integer not negative number please: "; //задание 2
         int number = scan(c);
-        while(number <= 0){
+        while(number <= 0) {
             number = scan(c);
         }
         int fac = factorial(number);
         printing(number, fac);
     }
-    static void task1(){
+    static void task1() {
         String c = "Enter rectangle's parameter please:"; //задание 1 
         int length = scan(c);
         int width = scan(c);
         square(length, width);
     }
-    static int scan(String phrase){
+    static int scan(String phrase) {
         System.out.println(phrase);
         Scanner skan = new Scanner(System.in);
         int number = skan.nextInt();
         return number; 
     }
-    static void printing(int x, int y){
+    static void printing(int x, int y) {
         System.out.print("factorial of the " + x + "  is: " + y + " = ");
-        for(int i = x; i > 0; i--){
+        for(int i = x; i > 0; i--) {
             System.out.print(i+ " ");
             if(i>1){
                 System.out.print("* ");
             }
         }
     }
-    static int factorial(int x){
+    static int factorial(int x) {
         int fac = 1;
-        for(int i = x; i > 0; i-- ){
+        for(int i = x; i > 0; i-- ) {
             fac = fac * i;
         }
         return fac;
     }
-    static void square(int x, int y){
+    static void square(int x, int y) {
         int sq = x*y;
         System.out.println("The square of the rectangle with length " + x + " and width " + y + "\nis " + sq);
     }
