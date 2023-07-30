@@ -6,29 +6,35 @@ public class HW_3 {
 // Затем программа должна вызывать метод, который принимает эти два числа и возвращает 
 // площадь прямоугольника. 
 
+    // task1();
 
-// ØНапишите программу, которая запрашивает у пользователя целое неотрицательное число n
+        // ØНапишите программу, которая запрашивает у пользователя целое неотрицательное число n
 //  и вычисляет его факториал. Факториал числа n обозначается как n! и равен произведению всех 
 // положительных целых чисел от 1 до n. Например, 5! = 5 * 4 * 3 * 2 * 1 = 120.
 //  Вам необходимо создать метод с именем factorial, который принимает целое число n в качестве аргумента
 //  и возвращает его факториал.
 
+    task2();
+    }
+    static void task2(){
+        System.out.println("Enter integer not negative number please: "); //задание 2
+        int number = scan();
+        while(number <= 0){
+            System.out.println("Enter integer not negative number please: ");
+            number = scan();
+        }
+        int fac = factorial(number);
+        printing(number, fac);
+    }
+    static void task1(){
         System.out.println("Enter rectangle's length please: "); //задание 1 
         int length = scan();
         System.out.println("Enter your rectangle's width please: ");
         int width = scan();
         square(length, width);
-
-        // System.out.println("Enter integer not negative number please: "); //задание 2
-        // int number = scan();
-        // while(number <= 0){
-        //     number = scan();
-        // }
-        // int fac = factorial(number);
-        // printing(number, fac);
     }
     static int scan(){
-        Scanner skan=new Scanner(System.in);
+        Scanner skan = new Scanner(System.in);
         int number = skan.nextInt();
         return number; 
     }
