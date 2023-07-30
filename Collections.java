@@ -77,18 +77,11 @@ public class Collections{
     people.add("Mary");
     people.add("Elen");
     ArrayList<String> people_and_numbers = new ArrayList<String>();
-    String c = "";
+    String c;
     for (int i = 0; i< 10; i++){
         c = number.get(i) + " - " + people.get(i);
         people_and_numbers.add(c);
     }
     System.out.print(people_and_numbers);
-
-    
-
-
-    
-
-
     }
 }
