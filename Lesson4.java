@@ -77,16 +77,15 @@ public class Lesson4 {
             }*/
             System.out.print("Enter your salary");
             System.out.println();
-            Scanner salary_scan=new Scanner(System.in);
-            int salary = salary_scan.nextInt();
+            Scanner scan=new Scanner(System.in);
+            int salary = scan.nextInt();
             if (salary < 0){
                 System.out.println("Your salary can't be less than 0");
                 System.exit(0);
             }
             System.out.print("Enter your working experience");
             System.out.println();
-            Scanner exp_scan=new Scanner(System.in);
-            int exp = exp_scan.nextInt();
+            int exp = scan.nextInt();
             if (exp < 0){
                 System.out.println("Your working experience can't be less than 0");
                 System.exit(0);
@@ -110,8 +109,7 @@ public class Lesson4 {
             else if (exp >= 25){
                 reward = 1.5;
             }
-            salary_scan.close();
-            exp_scan.close();
+            scan.close();
             System.out.print("Therefore your experience "+ exp + ", your bonus is: " + (reward - 1)*salary+", and your salary is: "+salary*reward);
         }
 
