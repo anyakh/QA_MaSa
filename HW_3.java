@@ -7,10 +7,8 @@ public class HW_3 {
             n = scan(c);
         }
         choise(n);
-   
     }
     static void choise(int x){
-        
         switch(x) {
             case 1: task1(); break;
             case 2: task2(); break;
@@ -26,9 +24,6 @@ public class HW_3 {
 
         String c = "Enter integer not negative number please: "; //задание 2
         int number = scan(c);
-        while(number <= 0) {
-            number = scan(c);
-        }
         int fac = factorial(number);
         printing(number, fac);
     }
@@ -38,7 +33,7 @@ public class HW_3 {
 // Затем программа должна вызывать метод, который принимает эти два числа и возвращает 
 // площадь прямоугольника.
 
-        String c = "Enter rectangle's parameter please:"; //задание 1 
+        String c = "Enter rectangle's parameter(width and length) please:"; //задание 1 
         int length = scan(c);
         int width = scan(c);
         square(length, width);
@@ -47,6 +42,10 @@ public class HW_3 {
         System.out.println(phrase);
         Scanner skan = new Scanner(System.in);
         int number = skan.nextInt();
+        while(number <= 0) {
+            System.out.println(phrase);
+            number = skan.nextInt();
+        }
         return number; 
     }
     static void printing(int x, int y) {
