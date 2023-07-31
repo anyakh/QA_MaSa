@@ -1,15 +1,18 @@
 import java.util.Scanner;
 public class HW_3 {
     public static void main(String[] args) { 
-        String c = "Choose the task wich you want to play: \n1st task: To count rectangle's square \n2nd task: To count factorial of the number";
-        int n = scan(c);
-        switch(n) {
+        int n = 1;
+        while (n != 0 ) {
+            n = scan("Choose the task wich you want to play:\n0 to quit the program \n1st task: To count rectangle's square \n2nd task: To count factorial of the number");
+            switch(n) {
+            case 0: break;
             case 1: task1(); break;
             case 2: task2(); break;
+            default: System.out.println("Invalid task " + n); break;
+            }
         }
-        while (n>2 || n<1){
-            n = scan(c);
-        }
+        System.out.println("Bye!");
+
     }
     static void task2() {
 
@@ -29,8 +32,8 @@ public class HW_3 {
 // Затем программа должна вызывать метод, который принимает эти два числа и возвращает 
 // площадь прямоугольника.
 
-        int length = scan("Enter rectangle's width please");
-        int width = scan("Enter rectangle's length please");
+        int length = scan("Enter rectangle's length please");
+        int width = scan("Enter rectangle's width please");
         int sq = square(length, width);
         System.out.println("The square of the rectangle with length " + length + " and width " + width + "\nis " + sq);
     }
