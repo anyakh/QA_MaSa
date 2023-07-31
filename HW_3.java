@@ -3,15 +3,12 @@ public class HW_3 {
     public static void main(String[] args) { 
         String c = "Choose the task wich you want to play: \n1st task: To count rectangle's square \n2nd task: To count factorial of the number";
         int n = scan(c);
-        while (n>2 || n<1){
-            n = scan(c);
-        }
-        choise(n);
-    }
-    static void choise(int x){
-        switch(x) {
+        switch(n) {
             case 1: task1(); break;
             case 2: task2(); break;
+        }
+        while (n>2 || n<1){
+            n = scan(c);
         }
     }
     static void task2() {
@@ -22,8 +19,7 @@ public class HW_3 {
 //  Вам необходимо создать метод с именем factorial, который принимает целое число n в качестве аргумента
 //  и возвращает его факториал.
 
-        String c = "Enter integer not negative number please: "; //задание 2
-        int number = scan(c);
+        int number = scan("Enter integer not negative number please: ");
         int fac = factorial(number);
         printing(number, fac);
     }
@@ -33,16 +29,15 @@ public class HW_3 {
 // Затем программа должна вызывать метод, который принимает эти два числа и возвращает 
 // площадь прямоугольника.
 
-        String c = "Enter rectangle's parameter(width and length) please:"; //задание 1 
-        int length = scan(c);
-        int width = scan(c);
-        square(length, width);
+        int length = scan("Enter rectangle's width please");
+        int width = scan("Enter rectangle's length please");
+        int sq = square(length, width);
+        System.out.println("The square of the rectangle with length " + length + " and width " + width + "\nis " + sq);
     }
     static int scan(String phrase) {
-        System.out.println(phrase);
         Scanner skan = new Scanner(System.in);
-        int number = skan.nextInt();
-        while(number <= 0) {
+        int number = 0;
+        while (number <= 0) {
             System.out.println(phrase);
             number = skan.nextInt();
         }
@@ -64,8 +59,8 @@ public class HW_3 {
         }
         return fac;
     }
-    static void square(int x, int y) {
+    static int square(int x, int y) {
         int sq = x*y;
-        System.out.println("The square of the rectangle with length " + x + " and width " + y + "\nis " + sq);
+        return sq;
     }
 }
