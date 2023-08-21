@@ -5,8 +5,8 @@ public class HW_3 {
         while (n != 3 ) {
             n = scan("Choose the task wich you want to play:\n1 - 1st task: To count rectangle's square \n2 - 2nd task: To count factorial of the number \n3 to quit the program ");
             switch(n) {
-            case 1: task1(); break;
-            case 2: task2(); break;
+                case 1: task1(); break;
+                case 2: task2(); break;
             default: System.out.println("Invalid task " + n); break;
             case 3: 
             System.out.println("Bye!");
