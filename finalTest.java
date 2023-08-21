@@ -42,10 +42,10 @@ public class finalTest{
         if (age < 18){
             printing("Hi, " + name + "! You're still young.");
         }
-        else if(age >= 18 && age < 30){
+        else if(age < 30){
             printing( "Hi, " + name + "! You're in the prime of your life.");
         }
-        else if(age >= 30){
+        else{
             printing( "Hi, " + name + "! You are a mentor for others.");
         }
     }
@@ -86,25 +86,19 @@ public class finalTest{
 // объекта в списке.
 
         ArrayList<Animal> Animals = new ArrayList<Animal>();
-        Cat cat1 = new Cat("Murka");
-        Animals.add(cat1);
-        Cat cat2 = new Cat("Yanis");
-        Animals.add(cat2); 
-        Cat cat3 = new Cat("Snezhok");
-        Animals.add(cat3); 
-        Dog dog1 = new Dog("Ronie");
-        Animals.add(dog1);
-        Dog dog2 = new Dog("Kris");
-        Animals.add(dog2);
-        Dog dog3 = new Dog("Imka");
-        Animals.add(dog3);
+        Animals.add(new Cat("Murka"));
+        Animals.add(new Cat("Yanis")); 
+        Animals.add(new Cat("Snezhok")); 
+        Animals.add(new Dog("Kris"));
+        Animals.add(new Dog("Imka"));
+        Animals.add(new Dog("Ronie"));
         for (Animal animal : Animals) {
             animal.makeSound();
         }
     }
 
 
-    static void task4(){
+    static void task4() {
 
     
 // Напишите программу, которая:
@@ -116,9 +110,9 @@ public class finalTest{
 
         ArrayList<String> Words = new ArrayList<String>();
         int i = 0;
+        printing("Enter your word (if you want to quit print stop): ");
         while (true){
             Scanner scan=new Scanner(System.in);
-            printing("Enter your word: ");
             String word = scan.next();
             if (word.equals("stop")){
                 break;
@@ -129,29 +123,17 @@ public class finalTest{
             }
         }
         System.out.print("There are " + i + " words in the List\n" + Words);
+
         String max = "", min = Words.get(0);
-        ArrayList<String> Min = new ArrayList<String>();
-        ArrayList<String> Max = new ArrayList<String>();
         for(String j : Words){
             if(j.length() > max.length()){
                 max = j;
-                Max.clear();
-                Max.add(j);
             }
             else if (j.length() < min.length()){
                 min  = j;
-                Min.clear();
-                Min.add(j);
-            }
-            else if (j.length() == min.length()){
-               Min.add(j);
-            }
-            else if (j.length() == max.length()){
-               Max.add(j);
             }
         }
-        System.out.print("\nWord with minimum signs: " + Min + "\nWord with maximum signs: " + Max);
-        System.out.println();
+        System.out.print("\nWord with minimum signs: " + min + "\nWord with maximum signs: " + max + "\n");
     }
 }
 
